@@ -1,0 +1,22 @@
+{
+  "camera": {
+    "tl_corner": [
+      100,
+      100
+    ],
+    "br_corner": [
+      300,
+      300
+    ]
+  },
+  "projector": {
+    "tl_corner": [
+      0,
+      0
+    ],
+    "br_corner": [
+      1894,
+      826
+    ]
+  }
+}
