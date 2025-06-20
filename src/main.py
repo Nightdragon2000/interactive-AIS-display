@@ -13,9 +13,9 @@ from datetime import datetime, timedelta
 # DATABASE CONFIGURATION - MODIFY THESE VALUES FOR YOUR SETUP
 # =============================================================================
 DB_HOST = "localhost"
-DB_NAME = "Ship_DB"
+DB_NAME = "DATABASE"
 DB_USER = "postgres"
-DB_PASSWORD = "2703"
+DB_PASSWORD = "PASSWORD"
 DB_PORT = 5432  # Default PostgreSQL port
 # =============================================================================
 
@@ -142,10 +142,10 @@ def fetch_ship_positions(cursor, transform, src_width, src_height):
     
     query = """
         SELECT s.mmsi, s.latitude, s.longitude, s.image_path, s.name, s.destination, s.eta, s.navigation_status
-        FROM ships_syros s
+        FROM ships s
         INNER JOIN (
             SELECT mmsi, MAX(timestamp) AS latest_timestamp
-            FROM ships_syros
+            FROM ships
             WHERE timestamp BETWEEN %s AND %s
             GROUP BY mmsi
         ) latest ON s.mmsi = latest.mmsi AND s.timestamp = latest.latest_timestamp
