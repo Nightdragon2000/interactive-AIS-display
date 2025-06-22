@@ -39,8 +39,6 @@ pip install -r requirements.txt
 
 #### Install PostgreSQL
 - **Windows**: Download from [postgresql.org](https://www.postgresql.org/downloads/)
-- **Linux**: `sudo apt-get install postgresql postgresql-contrib`
-- **macOS**: `brew install postgresql`
 
 #### Create Database and Schema
 1. Start PostgreSQL service
